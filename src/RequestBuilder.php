@@ -1,6 +1,6 @@
 <?php
 
-namespace Meng\Soap\HttpBinding;
+namespace SnowIO\Soap\HttpBinding;
 
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\StreamInterface;
