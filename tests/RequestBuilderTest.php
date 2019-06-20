@@ -1,7 +1,7 @@
 <?php
 
-use Meng\Soap\HttpBinding\RequestBuilder;
-use Meng\Soap\HttpBinding\RequestException;
+use SnowIO\Soap\HttpBinding\RequestBuilder;
+use SnowIO\Soap\HttpBinding\RequestException;
 use Zend\Diactoros\Stream;
 
 class RequestBuilderTest extends PHPUnit_Framework_TestCase
@@ -28,7 +28,7 @@ class RequestBuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function soap11RequestHttpGetBinding()
     {
@@ -62,7 +62,7 @@ class RequestBuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function soap12RequestPutMethod()
     {
@@ -101,7 +101,7 @@ class RequestBuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function soapNoEndpoint()
     {
@@ -111,7 +111,7 @@ class RequestBuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function soapNoMessage()
     {
@@ -121,7 +121,7 @@ class RequestBuilderTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function resetAllAfterFailure()
     {

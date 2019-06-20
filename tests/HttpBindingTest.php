@@ -1,9 +1,9 @@
 <?php
 
-use Meng\Soap\HttpBinding\HttpBinding;
-use Meng\Soap\HttpBinding\RequestBuilder;
-use Meng\Soap\HttpBinding\RequestException;
-use Meng\Soap\Interpreter;
+use SnowIO\Soap\HttpBinding\HttpBinding;
+use SnowIO\Soap\HttpBinding\RequestBuilder;
+use SnowIO\Soap\HttpBinding\RequestException;
+use SnowIO\Soap\Interpreter;
 use Zend\Diactoros\Response;
 use Zend\Diactoros\Stream;
 
@@ -73,12 +73,12 @@ EOD;
 
     /**
      * @test
-     * @expectedException Meng\Soap\HttpBinding\RequestException
+     * @expectedException SnowIO\Soap\HttpBinding\RequestException
      */
     public function requestBindingFailed()
     {
         $interpreter = new Interpreter(null, ['uri' => '', 'location' => '']);
-        $builderMock = $this->getMockBuilder('Meng\Soap\HttpBinding\RequestBuilder')
+        $builderMock = $this->getMockBuilder('SnowIO\Soap\HttpBinding\RequestBuilder')
             ->setMethods(['getSoapHttpRequest'])
             ->getMock();
         $builderMock->method('getSoapHttpRequest')->willThrowException(new RequestException());
